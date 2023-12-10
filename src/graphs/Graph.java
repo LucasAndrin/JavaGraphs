@@ -5,14 +5,14 @@ import java.util.*;
 public class Graph {
     private int size;
     private List<List<Edge>> vertices;
-    private boolean isTargeted = false;
+    private boolean isDirected = false;
 
     private Graph(int size) {
         setSize(size);
     }
 
-    private Graph(int size, boolean isTargeted) {
-        this.isTargeted = isTargeted;
+    private Graph(int size, boolean isDirected) {
+        this.isDirected = isDirected;
         setSize(size);
     }
 
@@ -39,7 +39,7 @@ public class Graph {
     public void addEdge(int origin, int destiny, int weight) {
         getEdges(origin).add(new Edge(origin, destiny, weight));
 
-        if (!isTargeted) {
+        if (!isDirected) {
             getEdges(destiny).add(new Edge(destiny, origin, weight));
         }
     }
@@ -58,7 +58,7 @@ public class Graph {
     public void removeEdge(int origin, int destiny) {
         removeOneEdge(origin, destiny);
 
-        if (!isTargeted) {
+        if (!isDirected) {
             removeOneEdge(destiny, origin);
         }
     }
@@ -77,24 +77,21 @@ public class Graph {
      * a) Um método para remover um vértice.
      * Removes the vertex and all edges associtate with it
      *
-     * @param origin int
+     * @param vertex int
      */
-    public void removeVertex(int origin) {
-        List<Edge> ownEdges = getEdges(origin);
+    public void removeVertex(int vertex) {
+        List<Edge> ownEdges = getEdges(vertex);
         for (Edge ownEdge : ownEdges) {
             List<Edge> outerEdges = getEdges(ownEdge.destiny);
-            outerEdges.removeIf(edge -> edge.destiny == origin);
+            outerEdges.removeIf(edge -> edge.destiny == vertex);
         }
 
-        System.out.println();
-        show();
-
-        vertices.remove(origin);
+        vertices.remove(vertex);
         size--;
 
         for (List<Edge> edges : vertices) {
             for (Edge edge : edges) {
-                if (origin < edge.destiny) {
+                if (vertex < edge.destiny) {
                     edge.destiny--;
                 }
             }
@@ -166,6 +163,7 @@ public class Graph {
         PriorityQueue<VertexDistancePair> priorityQueue = new PriorityQueue<>();
         priorityQueue.offer(new VertexDistancePair(origin, 0));
 
+//        int iteration = 0;
         while (!priorityQueue.isEmpty()) {
             VertexDistancePair pair = priorityQueue.poll();
 
@@ -181,6 +179,15 @@ public class Graph {
                     }
                 }
             }
+
+//            System.out.println(iteration + ": ");
+//            System.out.println("   Shortes Distance: " + Arrays.toString(distances));
+//            int[] previousCopy = previousVertices.clone();
+//            for (int j = 0; j < previousCopy.length; j++) {
+//                previousCopy[j] += 1;
+//            }
+//            System.out.println("   Previous Vertices: " + Arrays.toString(previousCopy));
+//            iteration++;
         }
         return buildPath(previousVertices, destiny);
     }
@@ -236,8 +243,7 @@ public class Graph {
 
     public boolean isHamiltonian() {
         for (int origin = 0; origin < size; origin++) {
-            List<Integer> path = new ArrayList<>();
-            if (deepFirstSearchHamiltonianPath(origin, origin, new boolean[size], path, 1)) {
+            if (deepFirstSearchHamiltonianPath(origin, origin, new boolean[size], new ArrayList<>(), 1)) {
                 return true;
             }
         }

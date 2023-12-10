@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72bc138b-c567-4934-8c63-0f621ce066ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graphs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/EulerianGraphType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/GraphTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/HamiltonianGraphType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/GraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/GraphTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +60,8 @@
       <recent name="graphs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GraphTest.testDijkstra">
-    <configuration name="GraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GraphTest.exerciceC">
+    <configuration name="GraphTest.exerciceA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Graphs" />
       <extension name="coverage">
         <pattern>
@@ -80,28 +71,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="graphs" />
       <option name="MAIN_CLASS_NAME" value="graphs.GraphTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GraphTest.dijkstraTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Graphs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="graphs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="graphs" />
-      <option name="MAIN_CLASS_NAME" value="graphs.GraphTest" />
-      <option name="METHOD_NAME" value="dijkstraTest" />
+      <option name="METHOD_NAME" value="exerciceA" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphTest.removeVerticeFromUntargetedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GraphTest.exerciceB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Graphs" />
       <extension name="coverage">
         <pattern>
@@ -111,13 +87,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="graphs" />
       <option name="MAIN_CLASS_NAME" value="graphs.GraphTest" />
-      <option name="METHOD_NAME" value="removeVerticeFromUntargetedTest" />
+      <option name="METHOD_NAME" value="exerciceB" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphTest.testDijkstra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GraphTest.exerciceC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Graphs" />
       <extension name="coverage">
         <pattern>
@@ -127,13 +103,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="graphs" />
       <option name="MAIN_CLASS_NAME" value="graphs.GraphTest" />
-      <option name="METHOD_NAME" value="testDijkstra" />
+      <option name="METHOD_NAME" value="exerciceC" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphTest.testRemoveVertex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GraphTest.testGetHamiltonianType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Graphs" />
       <extension name="coverage">
         <pattern>
@@ -143,7 +119,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="graphs" />
       <option name="MAIN_CLASS_NAME" value="graphs.GraphTest" />
-      <option name="METHOD_NAME" value="testRemoveVertex" />
+      <option name="METHOD_NAME" value="testGetHamiltonianType" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphTest.testIsHamiltonian" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Graphs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="graphs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="graphs" />
+      <option name="MAIN_CLASS_NAME" value="graphs.GraphTest" />
+      <option name="METHOD_NAME" value="testIsHamiltonian" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GraphTest.testDijkstra" />
-        <item itemvalue="JUnit.GraphTest" />
-        <item itemvalue="JUnit.GraphTest.testRemoveVertex" />
-        <item itemvalue="JUnit.GraphTest.dijkstraTest" />
-        <item itemvalue="JUnit.GraphTest.removeVerticeFromUntargetedTest" />
+        <item itemvalue="JUnit.GraphTest.exerciceC" />
+        <item itemvalue="JUnit.GraphTest.exerciceA" />
+        <item itemvalue="JUnit.GraphTest.exerciceB" />
+        <item itemvalue="JUnit.GraphTest.testGetHamiltonianType" />
+        <item itemvalue="JUnit.GraphTest.testIsHamiltonian" />
       </list>
     </recent_temporary>
   </component>
